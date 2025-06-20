@@ -163,3 +163,26 @@ Captures feedback from guests after a stay.
 - One **Booking** is associated with one **Payment**
 - One **User** can write many **Reviews**
 
+## ✨ Feature Breakdown
+
+### 🔐 User Management
+Handles user registration, login, authentication, and role assignment (guest or host). Secure password handling and session/token-based authentication ensure user data is protected and access is properly managed.
+
+### 🏠 Property Management
+Enables hosts to create, update, and delete property listings. Each property includes detailed descriptions, location data, and availability, allowing guests to browse and select suitable options.
+
+### 📅 Booking System
+Allows guests to book available properties for specific dates. The system validates availability, prevents booking conflicts, and manages check-in/check-out logic.
+
+### 💳 Payment Processing
+Integrates secure payment workflows for confirmed bookings. Tracks transactions, verifies payment status, and ensures reliable financial reporting and data integrity.
+
+### ⭐ Reviews & Ratings
+Enables guests to leave feedback and rate properties after their stay. This feature builds trust and transparency on the platform, helping future guests make informed decisions.
+
+### 📬 Notifications (Optional/Future Feature)
+Supports email or in-app alerts for booking confirmations, cancellations, and reminders. Keeps users informed and improves overall user experience.
+
+### ⚙️ Admin Dashboard (Optional/Future Feature)
+Provides superusers or staff with tools to monitor platform activity, manage users, and moderate listings or reviews.
+
