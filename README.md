@@ -27,6 +27,47 @@ A full-stack web application that simulates a real-world booking platform like A
 - **Simulate Real-World Workflow**  
   Follow industry-standard development practices, including Agile methodology, continuous integration, and testing.
 
+## 👥 Team Roles
+
+### Core Roles
+- **Backend Developer**  
+  Implements business logic, API endpoints, authentication, and server-side workflows.
+
+- **Database Administrator (DBA)**  
+  Designs and optimizes PostgreSQL schemas, indexes, migrations, query performance, and backups.
+
+- **DevOps Engineer**  
+  Builds and maintains CI/CD pipelines, Docker environments, deployment scripts, monitoring, and cloud infrastructure.
+
+- **QA Engineer**  
+  Designs and executes manual and automated tests to ensure quality, reliability, and performance across the application.
+
+### Additional Recommended Roles
+ *([Inspired by common software team structures for scalable projects](https://itrexgroup.com/blog/software-development-team-structure/))*
+
+- **Product Owner**  
+  Defines project vision, prioritizes backlog, and ensures the end product aligns with business goals.
+
+- **Project Manager / Scrum Master**  
+  Coordinates tasks, manages timelines, removes blockers, and maintains Agile workflows.
+
+- **Software Architect / Tech Lead**  
+  Oversees system architecture, enforces coding standards, and guides technical design decisions.
+
+- **Frontend Developer** *(if applicable)*  
+  Implements user interfaces and interacts with APIs to deliver smooth user experiences.
+
+- **UX/UI Designer**  
+  Crafts wireframes, prototypes, and ensures a user-centered design and intuitive interface.
+
+- **Business Analyst**  
+  Bridges business needs and technical requirements; refines user stories and functional specifications.
+
+- **Test Automation Engineer**  
+  Builds and maintains automated test suites, integrating them into CI/CD to ensure fast, reliable feedback.
+
+
+
 ## 🛠️ Tech Stack
 
 This project leverages a modern full-stack setup with the following technologies:
