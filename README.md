@@ -80,3 +80,86 @@ This project leverages a modern full-stack setup with the following technologies
 - **[Redis](https://redis.io/)** – In-memory data store used as a message broker for Celery and caching.
 - **[Docker](https://www.docker.com/)** – Containerization for consistent development and deployment environments.
 - **CI/CD Pipelines** – Automates testing and deployment workflows (e.g., GitHub Actions).
+
+## 🗃️ Database Design
+
+The project is structured around five core entities that reflect real-world components of a booking platform like Airbnb. Below is an overview of each entity, its key fields, and how the entities relate to one another.
+
+### 🔹 Users
+Represents platform users (both hosts and guests).
+
+**Key Fields:**
+- `id` – Unique identifier
+- `name` – Full name of the user
+- `email` – Unique email for authentication
+- `role` – Indicates whether the user is a host, guest, or both
+- `created_at` – Timestamp of account creation
+
+### 🔹 Properties
+Represents listings posted by hosts.
+
+**Key Fields:**
+- `id` – Unique identifier
+- `user_id` – Foreign key to the host (User)
+- `title` – Name of the listing
+- `description` – Detailed property info
+- `location` – City, region, or coordinates
+
+**Relationships:**
+- A **User** (host) can have **many Properties**
+- A **Property** belongs to one **User**
+
+### 🔹 Bookings
+Captures reservations made by guests.
+
+**Key Fields:**
+- `id` – Unique identifier
+- `user_id` – Guest who made the booking
+- `property_id` – The booked property
+- `start_date` – Booking start date
+- `end_date` – Booking end date
+
+**Relationships:**
+- A **User** (guest) can have **many Bookings**
+- A **Booking** belongs to one **Property**
+- A **Booking** is made by one **User**
+
+### 🔹 Payments
+Tracks transactions related to bookings.
+
+**Key Fields:**
+- `id` – Unique identifier
+- `booking_id` – Related booking
+- `amount` – Total paid
+- `status` – Payment status (e.g., pending, completed, failed)
+- `timestamp` – Time of payment
+
+**Relationships:**
+- A **Payment** is linked to one **Booking**
+- A **Booking** can have one **Payment**
+
+### 🔹 Reviews
+Captures feedback from guests after a stay.
+
+**Key Fields:**
+- `id` – Unique identifier
+- `user_id` – Guest who left the review
+- `property_id` – The reviewed property
+- `rating` – Numerical rating
+- `comment` – Optional text feedback
+
+**Relationships:**
+- A **User** can write **many Reviews**
+- A **Property** can have **many Reviews**
+- A **Review** belongs to both a **User** and a **Property**
+
+---
+
+**Entity Relationship Summary:**
+
+- One **User** can own many **Properties** (if host)
+- One **User** can make many **Bookings** (if guest)
+- One **Property** can have many **Bookings** and **Reviews**
+- One **Booking** is associated with one **Payment**
+- One **User** can write many **Reviews**
+
