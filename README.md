@@ -186,3 +186,46 @@ Supports email or in-app alerts for booking confirmations, cancellations, and re
 ### ⚙️ Admin Dashboard (Optional/Future Feature)
 Provides superusers or staff with tools to monitor platform activity, manage users, and moderate listings or reviews.
 
+## 🔐 API Security
+
+Security is a critical component of this platform, especially as it handles sensitive user data, property listings, and financial transactions. The following key measures will be implemented to ensure the API is secure and trustworthy:
+
+### ✅ Authentication
+User identities will be verified using secure methods such as JWT (JSON Web Tokens) or session-based authentication. This ensures that only registered users can access protected endpoints, reducing the risk of unauthorized access.
+
+**Why it matters:**  
+Authentication is the first line of defense against impersonation and unauthorized actions. It protects user accounts and secures access to personal and transactional data.
+
+### ✅ Authorization
+Role-based access control (RBAC) will be used to manage permissions for different types of users (e.g., hosts vs. guests). API endpoints will be protected to ensure users can only perform actions allowed for their role.
+
+**Why it matters:**  
+Authorization prevents misuse of the system by ensuring users can only access or modify the resources they are permitted to. For example, a guest should not be able to edit another user’s property listing.
+
+### ✅ Rate Limiting
+Rate limiting will be applied to prevent abuse, such as brute-force login attempts or spamming API requests. This is especially important for publicly accessible endpoints like authentication and search.
+
+**Why it matters:**  
+Rate limiting protects the API from denial-of-service (DoS) attacks and ensures fair usage for all users.
+
+### ✅ Data Validation and Sanitization
+All incoming data will be validated and sanitized to prevent injection attacks, malformed input, and accidental data corruption.
+
+**Why it matters:**  
+Proper validation and sanitization prevent common vulnerabilities like SQL injection, XSS (Cross-Site Scripting), and logic errors that could compromise system integrity.
+
+### ✅ Secure Payment Handling
+Payment endpoints will be secured with HTTPS, and all interactions with the payment gateway will use encrypted tokens and secure APIs.
+
+**Why it matters:**  
+Payments involve sensitive financial data. Proper security measures are essential to prevent fraud, protect cardholder information, and comply with standards like PCI-DSS.
+
+### ✅ HTTPS and Secure Headers
+The entire application will be served over HTTPS, and appropriate security headers (e.g., Content Security Policy, X-Frame-Options) will be set.
+
+**Why it matters:**  
+Encrypting data in transit and enforcing security headers helps prevent man-in-the-middle attacks and other web-based threats.
+
+---
+
+Security will be continuously monitored and updated as the project evolves, following industry best practices and guidelines like OWASP Top 10.
