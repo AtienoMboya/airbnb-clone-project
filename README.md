@@ -257,3 +257,10 @@ This project leverages the following tools in the CI/CD process:
 ---
 
 The CI/CD setup ensures that code pushed to the main branch meets quality standards and is production-ready.
+
+
+---
+
+### 🙏 Acknowledgments
+
+Special thanks to [ChatGPT by OpenAI](https://openai.com/chatgpt) for assistance in drafting and refining the content of this README.
