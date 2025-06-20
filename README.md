@@ -229,3 +229,31 @@ Encrypting data in transit and enforcing security headers helps prevent man-in-t
 ---
 
 Security will be continuously monitored and updated as the project evolves, following industry best practices and guidelines like OWASP Top 10.
+
+## 🔄 CI/CD Pipeline
+
+### What is CI/CD?
+
+CI/CD stands for **Continuous Integration** and **Continuous Deployment/Delivery**. It is a set of automated processes that enable developers to build, test, and deploy code more efficiently and reliably. Every time new code is pushed to the repository, the CI/CD pipeline ensures it is automatically tested and, if successful, deployed to the appropriate environment.
+
+### Why It Matters
+
+Implementing a CI/CD pipeline helps:
+- Detect and fix bugs early through automated testing
+- Speed up the development cycle with frequent, reliable deployments
+- Maintain code quality and reduce manual errors
+- Enable seamless collaboration across team members
+
+### Tools Used
+
+This project leverages the following tools in the CI/CD process:
+
+- **GitHub Actions** – Automates testing, linting, and deployment workflows directly from the GitHub repository.
+- **Docker** – Ensures consistent development, testing, and production environments using containerization.
+- **Celery & Redis** – Asynchronous task management used in background jobs can also be managed as part of deployment.
+- **PostgreSQL** – Database service configuration and migrations can be automated as part of the pipeline.
+- **(Optional)** Deployment platforms like **Heroku**, **Render**, or **AWS** can be integrated into the pipeline for automatic delivery to staging or production.
+
+---
+
+The CI/CD setup ensures that code pushed to the main branch meets quality standards and is production-ready.
