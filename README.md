@@ -68,7 +68,7 @@ A full-stack web application that simulates a real-world booking platform like A
 
 
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 This project leverages a modern full-stack setup with the following technologies:
 
